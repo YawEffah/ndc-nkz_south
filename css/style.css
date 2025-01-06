@@ -137,9 +137,13 @@ a{
 
 .cta-btn{
     color: white;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 10px;
     background: var(--accent-green);
+}
+
+.cta-secondary{
+    background: var(--accent-red);
 }
 
 .cta-btn:active,
@@ -153,12 +157,14 @@ a{
     padding: 40px 20px;
 }
 
-.executive{
+.executive,
+.news-item{
     border-radius: 10px;
     background: #fff;
 }
 
-.executive img{
+.executive img,
+.news-item img{
     width: 100%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -167,4 +173,34 @@ a{
 .executive-info{
     padding: 20px;
     color: var(--accent-green);
+}
+
+.video-wrap{
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.video-wrap video{
+    width: 100%;
+    border-radius: 10px
+}
+
+.video-wrap h3{
+    color: var(--accent-green);
+}
+
+.news{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.news-info h5{
+    color: var(--accent-green);
+    font-size: 20px;
+}
+
+.news-item h5:hover{
+    text-decoration: underline;
 }
