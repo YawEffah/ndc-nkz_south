@@ -58,6 +58,15 @@ a{
     background-color: var(--accent-red);
 }
 
+.carousel{
+    height: 250px;
+    border: 2px solid orange;
+}
+
+.carousel img{
+    height: 250px;
+}
+
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -103,8 +112,11 @@ a{
 }
 
 .about-wrap{
-    padding: 40px 20px;
     background-color: var(--accent-red);
+}
+
+.custom-container{
+    padding: 60px 20px;
 }
 
 .about-wrap h2{
@@ -153,30 +165,47 @@ a{
     background: var(--accent-yellow);
 }
 
-.executives-wrap{
-    padding: 40px 20px;
+.heading{
+    width: 300px;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.heading .underline{
+    width: 50%;
+    border-bottom: 3px solid var(--accent-red);
+}
+
+.heading{
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;
 }
 
 .executive,
-.news-item{
+.news-item,
+.project-item{
+    padding: 0;
     border-radius: 10px;
     background: #fff;
 }
 
 .executive img,
-.news-item img{
+.news-item img,
+.project-item img{
     width: 100%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-.executive-info{
-    padding: 20px;
+.executive-info,
+.news-info{
+    padding: 0 5px 10px 5px;
     color: var(--accent-green);
 }
 
 .video-wrap{
-    padding: 40px 20px;
     background: #fff;
 }
 
@@ -193,14 +222,185 @@ a{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-
 }
 
-.news-info h5{
+.news-info p{
+    text-align: left;
     color: var(--accent-green);
-    font-size: 20px;
 }
 
 .news-item h5:hover{
     text-decoration: underline;
 }
+
+.projects-wrap{
+    background-color: var(--accent-green);
+}
+
+.projects{
+    width: 100%;
+    display: grid;
+    grid-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-item{
+    background: #fff;
+}
+
+.projects-wrap .heading h2{
+    color: var(--accent-yellow);
+}
+
+.project-info{
+    padding: 15px;
+    text-align: left;
+}
+
+.contact{
+    padding: 80px 20px;
+}
+
+.contact .heading h2{
+    color: var(--accent-green);
+}
+
+.contact .heading .underline{
+    border-bottom: 3px solid var(--accent-yellow);
+}
+
+.border{
+    display: none;
+}
+
+.location-map{
+    height: 300px;
+    width: 100%;
+}
+
+.footer{
+    padding: 30px 20px;
+    background: var(--primary-bg);
+}
+
+.footer h2{
+    color: var(--accent-green);
+    font-size: 20px;
+}
+
+.footer .copyright{
+    font-size: 14px;
+}
+
+.socials{
+    color: #ccc;
+    margin-right: 10px;
+}
+
+.footer a:active,
+.footer a:hover{
+    color: var(--accent-yellow);
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 10px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    color: #eea302; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    font-size: 20px; 
+    /* background: #eea302; */
+  }
+  
+  #myBtn:hover {
+    color: var(--accent-green);
+    transition: 0.5s ease;;
+}
+
+
+/* Style for scroll animation */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  /* Animation class to be added when element is in viewport */
+  .animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  @media (min-width: 768px) {
+    .carousel{
+        height: 300px;
+    }
+
+    .carousel img{
+        height: 300px;
+    }
+
+    .border{
+        display: block;
+    }
+
+    .contact-info{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .location-map{
+        height: 400px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .project-item{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "project-info project-img";
+    }
+
+    .project-info{
+        width: 100%;
+        grid-area: project-info;
+    }
+
+    .project img{
+        width: 100%;
+        grid-area: project-img;
+    }
+
+    .carousel{
+        height: auto;
+    }
+
+    .carousel img{
+        height: 100%;
+    }
+
+    .contact-info{
+        width: 65%;
+    }
+
+    .footer{
+        margin: 0 auto;
+    }
+   
+  }
+
+
