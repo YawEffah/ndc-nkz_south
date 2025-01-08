@@ -239,6 +239,11 @@ a{
     grid-template-columns: repeat(2, 1fr);
 }
 
+.news-item a:hover,
+.project-item a:hover{
+    text-decoration: underline;
+}
+
 .news-info p{
     text-align: left;
     color: var(--accent-green);
